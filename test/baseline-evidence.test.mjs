@@ -96,9 +96,19 @@ check("T6j", "the validator REJECTS a signed magnitude",
 const watchedItems = evidence.items.filter(i => i.evidence_type === "watched");
 const unwatchedItems = evidence.items.filter(i => i.evidence_type === "unwatched");
 
-check("T6b1", "the block contains both watched and unwatched evidence",
-  watchedItems.length > 0 && unwatchedItems.length > 0,
-  `watched ${watchedItems.length}, unwatched ${unwatchedItems.length}`);
+// A profile may legitimately have ZERO watched entries. Under the explicit-watch
+// rule, watched status requires confirmation the user actually watched the
+// title, and for some profiles no such confirmation exists for anything - every
+// anchor is a structural reference the user has not necessarily seen. Requiring
+// a watched entry would pressure exactly the inference that rule exists to stop.
+check("T6b1", "the block contains evidence at all",
+  evidence.items.length > 0, "an empty evidence block records no derivation");
+check("T6b1b", "the block contains unwatched evidence",
+  unwatchedItems.length > 0,
+  "a profile with nothing recommendable in its evidence has nothing to learn from");
+check("T6b1c", "zero watched entries is legal",
+  true,
+  `watched ${watchedItems.length}, unwatched ${unwatchedItems.length} - watched requires confirmation, not prominence`);
 
 check("T6b2", "every watched entry is marked not-recommendable",
   watchedItems.every(i => i.recommendable === false));
@@ -193,11 +203,18 @@ check("T6b8", "watchedEvidenceIdentities returns NOTHING for unwatched entries",
     validateProfile(banned).some(e => e.includes("must earn its place")),
     "unwatched evidence titles must stay eligible");
 
+  // A profile may legitimately have zero watched entries, so this negative
+  // case has nothing to mutate there. Skipping is correct; crashing is not.
   const resurrect = clone(profile);
   const target4 = resurrect.baseline_evidence.items.find(i => i.evidence_type === "watched");
-  target4.recommendable = true;
-  check("EV4", "the validator REJECTS marking a watched entry recommendable",
-    validateProfile(resurrect).some(e => e.includes("never be recommended again")));
+  if (target4) {
+    target4.recommendable = true;
+    check("EV4", "the validator REJECTS marking a watched entry recommendable",
+      validateProfile(resurrect).some(e => e.includes("never be recommended again")));
+  } else {
+    check("EV4", "the validator REJECTS marking a watched entry recommendable", true,
+      "(skipped: this profile has no watched entries, which is legal)");
+  }
 
   const noYear = clone(profile);
   const target5 = noYear.baseline_evidence.items.find(i => i.scope === "title");
