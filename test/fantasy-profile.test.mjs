@@ -335,9 +335,23 @@ if (fs.existsSync(discDir)) {
 const leaked = sourceItems.filter(i => identityForms(i).some(f => watchedForms.has(f)));
 check("L1", "no WATCHED baseline identity appears in public data", leaked.length === 0,
   leaked.map(i => i.title).join(", "));
-check("L2", "the watched set expands franchises to individual films",
-  watched.length === 13,
-  `expected 13 (Game of Thrones, The Witcher, 3 LotR, 8 Harry Potter), got ${watched.length}`);
+check("L2", "the watched set contains ONLY explicitly confirmed titles",
+  watched.length === 5,
+  `expected 5 (Game of Thrones, The Witcher and the three Lord of the Rings films), got ${watched.length}`);
+check("L2b", "the Harry Potter films are NOT watched exclusions",
+  ["tt0241527","tt0295297","tt0304141","tt0330373","tt0373889","tt0417741","tt0926084","tt1201607"]
+    .every(id => !watchedForms.has(`movie:${id}`)),
+  "the eight-film member list was inferred, never confirmed; all eight stay discoverable");
+check("L2c", "Harry Potter remains eligible for ordinary Fantasy discovery", (() => {
+  const r = runValidateWith([dnaItem(DARK_EPIC, { imdb_id: "tt0241527", title: "Harry Potter and the Sorcerer's Stone", year: 2001 })]);
+  return r.code === 0;
+})(), "a title used to BUILD the profile must not be banned for that reason alone");
+check("L2d", "the Lord of the Rings trilogy claim stays bounded to its three films",
+  watched.filter(w => /Lord of the Rings/.test(w.title)).length === 3,
+  "the user wrote TRILOGY, which is their own enumeration - it covers no Hobbit or later entry");
+check("L2e", "every watched entry accounts for how watching was confirmed",
+  profile.baseline_evidence.items.filter(i => i.evidence_type === "watched")
+    .every(i => typeof i.watched_confirmation === "string" && i.watched_confirmation.trim()));
 
 {
   const got = runValidateWith([dnaItem(DARK_EPIC, { imdb_id: "tt0944947", type: "series", title: "Game of Thrones", year: 2011 })]);
