@@ -17,7 +17,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Entirely non-human cast across Gelfling clans, Skeksis and Mystics; practical puppetry executed with modern technique - a deliberate aesthetic, not a dated one.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt6905542.json ; https://en.wikipedia.org/wiki/The_Dark_Crystal%3A_Age_of_Resistance",
       "dna": {
         "magic_presence": 8,
         "magic_system_depth": 5,
@@ -70,7 +70,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Adult animated; sustained combat across short episodes, explicit magic disciplines, night creatures central.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt6517102.json ; https://en.wikipedia.org/wiki/Castlevania_(TV_series)",
       "dna": {
         "magic_presence": 8,
         "magic_system_depth": 6,
@@ -123,7 +123,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Orc/human first contact through the Dark Portal; fel and arcane magic have stated costs. Battles recur throughout.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt0803096.json ; https://en.wikipedia.org/wiki/Warcraft_(film)",
       "dna": {
         "magic_presence": 9,
         "magic_system_depth": 6,
@@ -176,7 +176,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Barrel chase, Mirkwood spiders and the Smaug confrontation give this entry the densest action of the trilogy's first two parts.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt1170358.json ; https://en.wikipedia.org/wiki/The_Hobbit%3A_The_Desolation_of_Smaug",
       "dna": {
         "magic_presence": 6,
         "magic_system_depth": 2,
@@ -229,7 +229,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Structurally a single extended battle; five-faction conflict occupies most of the runtime.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt2310332.json ; https://en.wikipedia.org/wiki/The_Hobbit%3A_The_Battle_of_the_Five_Armies",
       "dna": {
         "magic_presence": 6,
         "magic_system_depth": 2,
@@ -282,7 +282,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Second-Age Tolkien material; multi-thread season with heavy travel and worldbuilding, action concentrated in a few episodes.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt7631058.json ; https://en.wikipedia.org/wiki/The_Lord_of_the_Rings%3A_The_Rings_of_Power",
       "dna": {
         "magic_presence": 6,
         "magic_system_depth": 3,
@@ -335,7 +335,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "The One Power is a strictly gendered, rule-bound system with named weaves and real costs; seasons are travel-heavy with episodic climactic battles.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt7462410.json ; https://en.wikipedia.org/wiki/The_Wheel_of_Time_(TV_series)",
       "dna": {
         "magic_presence": 9,
         "magic_system_depth": 8,
@@ -388,7 +388,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Middle-earth journey structure; goblin and stone-giant sequences distributed across a long runtime.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt0903624.json ; https://en.wikipedia.org/wiki/The_Hobbit%3A_An_Unexpected_Journey",
       "dna": {
         "magic_presence": 6,
         "magic_system_depth": 2,
@@ -441,7 +441,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "The Dreaming and Hell are fully realised realms and the Endless are a distinct order of beings. Contemplative, dialogue-led, very little combat. Superhero framing is measured as low: this is cosmology, not hero-versus-villain.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt1751634.json ; https://en.wikipedia.org/wiki/The_Sandman_(TV_series)",
       "dna": {
         "magic_presence": 9,
         "magic_system_depth": 4,
@@ -494,7 +494,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Old gods versus new as literal factions; heavily tableau-driven with long dialogue stretches and rare violence.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt1898069.json ; https://en.wikipedia.org/wiki/American_Gods_(TV_series)",
       "dna": {
         "magic_presence": 8,
         "magic_system_depth": 3,
@@ -546,7 +546,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Daemons, alethiometry and Dust form a semi-formalised system; parallel worlds are central. Panserbjorne and witches are distinct peoples.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt5607976.json ; https://en.wikipedia.org/wiki/His_Dark_Materials_(TV_series)",
       "dna": {
         "magic_presence": 7,
         "magic_system_depth": 6,
@@ -599,7 +599,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Adult animated party-adventure with explicit spellcasting; bawdy humour sits alongside genuine gore and character death, so the comedy is not softening the world.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt11247158.json ; https://en.wikipedia.org/wiki/The_Legend_of_Vox_Machina",
       "dna": {
         "magic_presence": 9,
         "magic_system_depth": 6,
@@ -645,14 +645,14 @@
       "status": "watch",
       "preference": null,
       "rank": 13,
-      "match_score": 78,
+      "match_score": 77,
       "tags": [],
       "reason": "The Greek pantheon as a dysfunctional ruling family, with a working Underworld and real mythic weight.",
       "aliases": [],
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Greek pantheon reframed as a dysfunctional ruling family; the Underworld is a working bureaucracy. Satirical register but not slapstick.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt8550732.json ; https://en.wikipedia.org/wiki/Kaos_(TV_series)",
       "dna": {
         "magic_presence": 7,
         "magic_system_depth": 3,
@@ -677,7 +677,7 @@
         "visual_quality": 8,
         "retro_visual_style": 1,
         "visual_spectacle": 7,
-        "comedy": 6,
+        "comedy": 7,
         "romance_focus": 4,
         "drama_focus": 7,
         "superhero": 0,
@@ -704,7 +704,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Elven pre-Conjunction setting; compressed four-episode arc built around a warband, so combat recurs frequently.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt12785720.json ; https://en.wikipedia.org/wiki/The_Witcher%3A_Blood_Origin",
       "dna": {
         "magic_presence": 8,
         "magic_system_depth": 5,
@@ -757,7 +757,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Piltover/Zaun class conflict; hextech is an explicitly rule-bound magic-technology. Action recurs through most episodes.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt11126994.json ; https://en.wikipedia.org/wiki/Arcane_(TV_series)",
       "dna": {
         "magic_presence": 8,
         "magic_system_depth": 7,
@@ -809,7 +809,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Whole-season structure: council, succession and court scenes dominate; battle set pieces are occasional but extreme when they occur - hence low density with very high intensity.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt11198330.json ; https://en.wikipedia.org/wiki/House_of_the_Dragon",
       "dna": {
         "magic_presence": 3,
         "magic_system_depth": 2,
@@ -862,7 +862,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Grisha orders (Corporalki, Etherealki, Materialki) are an explicit taxonomy of abilities; heist and military threads keep action recurring.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt2403776.json ; https://en.wikipedia.org/wiki/Shadow_and_Bone_(TV_series)",
       "dna": {
         "magic_presence": 9,
         "magic_system_depth": 8,
@@ -914,7 +914,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Post-war Spain intercut with an underground realm governed by three explicit tasks; violence is brief and severe, most of the runtime is dread.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt0457430.json ; https://en.wikipedia.org/wiki/Pan's_Labyrinth",
       "dna": {
         "magic_presence": 6,
         "magic_system_depth": 4,
@@ -967,7 +967,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Arthurian poem adaptation structured as episodic pilgrimage; almost no combat, sustained mystery about the bargain's meaning.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt9243804.json ; https://en.wikipedia.org/wiki/The_Green_Knight_(film)",
       "dna": {
         "magic_presence": 7,
         "magic_system_depth": 2,
@@ -1020,7 +1020,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Arthurian retelling from Nimue's perspective; Fey clans versus the Red Paladins drives recurring skirmishes.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt8210856.json ; https://en.wikipedia.org/wiki/Cursed_(2020_TV_series)",
       "dna": {
         "magic_presence": 8,
         "magic_system_depth": 4,
@@ -1073,7 +1073,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Post-apocalyptic Four Lands with elves, gnomes, trolls and demons; quest structure with regular creature encounters.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt1051220.json ; https://en.wikipedia.org/wiki/The_Shannara_Chronicles",
       "dna": {
         "magic_presence": 8,
         "magic_system_depth": 4,
@@ -1126,7 +1126,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Motion-capture retelling of the Old English poem; three monster confrontations structure the runtime.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt0442933.json ; https://en.wikipedia.org/wiki/Beowulf_(2007_film)",
       "dna": {
         "magic_presence": 6,
         "magic_system_depth": 2,
@@ -1179,7 +1179,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Victorian gothic assembling Dracula, Frankenstein and werewolf myth; horror register throughout, action sparse and sudden.",
+      "source": "https://v3-cinemeta.strem.io/meta/series/tt2628232.json ; https://en.wikipedia.org/wiki/Penny_Dreadful_(TV_series)",
       "dna": {
         "magic_presence": 7,
         "magic_system_depth": 4,
@@ -1232,7 +1232,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Orcs and elves as established social classes in modern Los Angeles; structured as a single night-long pursuit, so action is near-continuous.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt5519340.json ; https://en.wikipedia.org/wiki/Bright_(film)",
       "dna": {
         "magic_presence": 7,
         "magic_system_depth": 4,
@@ -1284,7 +1284,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Norse revenge saga; seeresses and Valhalla visions are real but unsystematised. Long ritual/quiet stretches between brutal raids.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt11138512.json ; https://en.wikipedia.org/wiki/The_Northman",
       "dna": {
         "magic_presence": 5,
         "magic_system_depth": 2,
@@ -1337,7 +1337,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Grimm material played straight and grim; Dark Forest and sanctuary sequences carry the spectacle, with periodic sieges.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt1735898.json ; https://en.wikipedia.org/wiki/Snow_White_and_the_Huntsman",
       "dna": {
         "magic_presence": 8,
         "magic_system_depth": 3,
@@ -1390,7 +1390,7 @@
       "added_at": "2026-08-27T09:00:00Z",
       "added_by": "bootstrap",
       "discovery_run_id": null,
-      "source": "Vermithrax is the antagonist and the film is unusually grim for its moment; go-motion creature work is the defining visual technique.",
+      "source": "https://v3-cinemeta.strem.io/meta/movie/tt0082288.json ; https://en.wikipedia.org/wiki/Dragonslayer_(1981_film)",
       "dna": {
         "magic_presence": 7,
         "magic_system_depth": 3,

@@ -108,6 +108,45 @@ PHASE B - RESEARCH (time-boxed)
 9. dna_tags may contain ONLY values from the tag_registry in
    data/taste-profile.json. Read it; do not recall it.
 
+9b. SOURCE PROVENANCE IS MANDATORY AND IS NOT AN EVIDENCE SUMMARY.
+
+   Two fields are easy to confuse. Get them the right way round:
+
+     reason  = the short human-readable explanation on the catalog card.
+     source  = the ACTUAL MATERIAL your research rested on, as URLs.
+
+   "Sustained combat across short episodes" is NOT provenance. It restates
+   your conclusion without saying where it came from, so nobody can check
+   it later. validate.mjs REJECTS any accepted item whose source contains
+   no usable http(s) URL, and you must not work around that by adding a
+   token URL that does not actually support anything.
+
+   Format:  "https://source-one/... ; https://source-two/..."
+
+   Aim for TWO OR MORE useful sources per accepted title:
+     - one may establish identity and basic premise;
+     - at least one must be substantive enough to support the Content DNA
+       you wrote - plot/structure detail, episode breakdown, production or
+       presentation discussion, a serious review or recap.
+   One bare identity lookup on its own does not justify a 28-value
+   fingerprint.
+
+   Two dimension-specific rules are absolute:
+
+     - action_density REQUIRES WHOLE-RUNTIME STRUCTURAL EVIDENCE: episode
+       structure, scene distribution, or a review describing pacing across
+       the whole work. A TRAILER URL CAN NEVER BE THE SOLE EVIDENCE FOR
+       action_density, and a trailer is not adequate evidence for it at
+       all. Trailers are cut to imply density that may not exist.
+
+     - retro_visual_style REQUIRES EVIDENCE ABOUT THE PRESENTATION ITSELF -
+       cinematography, effects technique, design language, or critical
+       discussion of the look. A RELEASE DATE IS NEVER EVIDENCE FOR IT.
+
+   If you cannot support a title's DNA with real, citable material, DO NOT
+   ACCEPT IT. Reject it and say why. Shipping an unsupported fingerprint is
+   worse than shipping nothing: it is unfalsifiable later.
+
 10. STOP RESEARCHING when either is true:
     - you have enough qualifying candidates to fill the daily caps in
       data/taste-profile.json -> automation_rules, or
@@ -148,6 +187,12 @@ PHASE C - ACCEPT, VALIDATE, COMMIT (reserve time for this)
     against the identity set AND the watched-exclusion set. State can
     change under you; the PHASE A set is a working copy, not a guarantee.
 
+15b. FAIL CLOSED ON MISSING PROVENANCE. Before writing, check every
+    accepted item yourself: source must exist, be a non-empty string, and
+    contain at least one real http(s) URL. Drop any title that fails rather
+    than inventing a citation for it. The validator enforces this too, but
+    discovering it at step 16 wastes the run.
+
 16. VALIDATE THE INTENDED STATE by running:
         node scripts/validate.mjs
     It must pass. If it fails, FIX THE DATA - never weaken the validator,
@@ -178,6 +223,10 @@ THINGS THAT ARE NEVER ACCEPTABLE
 - inferring action_density from a trailer or from action_intensity
 - using release year as a preference signal
 - inventing a dna_tag outside the registry
+- putting a prose evidence summary in `source` instead of real URLs
+- citing a URL that does not actually support what it is cited for
+- using a trailer as evidence for action_density
+- using a release date as evidence for retro_visual_style
 - committing without a passing validate
 ```
 

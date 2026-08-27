@@ -185,6 +185,7 @@ const dnaItem = (over = {}, meta = {}) => ({
   imdb_id: meta.imdb_id || "tt9999999", type: "movie", title: meta.title || "Probe", year: meta.year || 2020,
   status: "watch", match_score: 85, tags: [], reason: "probe",
   added_at: "2026-08-27T00:00:00Z", added_by: "bootstrap",
+  source: "https://example.org/identity ; https://example.org/structural-analysis",
   dna: { ...NEUTRAL, ...over }, dna_confidence: 0.9, dna_tags: [], ...meta
 });
 const row = id => config.catalogs.find(c => c.id === id);
@@ -412,6 +413,37 @@ check("N3", "the profile validates, including its evidence block",
     check("Q3", "the built Past 24h row contains no bootstrap item", rows.length === 0,
       `${rows.length} items leaked into a daily-discovery feed`);
   }
+}
+
+// ---------------------------------------------------------------------------
+// SP - source provenance on the REAL bootstrap library
+//
+// 'reason' explains a title; 'source' has to say where the research came from.
+// The first bootstrap shipped prose in 'source' and it read like justification,
+// which is exactly why this is asserted over the real data and not only over a
+// fixture.
+// ---------------------------------------------------------------------------
+{
+  const urlsIn = value => String(value).split(/[;,\s]+/).flatMap(t => {
+    try { const u = new URL(t.trim()); return /^https?:$/.test(u.protocol) && u.hostname.includes(".") ? [u.href] : []; }
+    catch { return []; }
+  });
+
+  const noSource = sourceItems.filter(i => typeof i.source !== "string" || i.source.trim() === "");
+  check("SP1", "every source item carries a source", noSource.length === 0, noSource.map(i => i.title).join(", "));
+
+  const proseOnly = sourceItems.filter(i => urlsIn(i.source).length === 0);
+  check("SP2", "no source is prose-only - every one cites real URLs",
+    proseOnly.length === 0, proseOnly.map(i => i.title).join(", "));
+
+  const thin = sourceItems.filter(i => urlsIn(i.source).length < 2);
+  check("SP3", "every source item cites TWO OR MORE sources",
+    thin.length === 0,
+    `identity alone does not justify a 28-value fingerprint: ${thin.map(i => i.title).join(", ")}`);
+
+  check("SP4", "reason and source are distinct fields, not duplicates",
+    sourceItems.every(i => i.reason !== i.source && !urlsIn(i.reason).length),
+    "reason is card text for a human; source is citable material");
 }
 
 check("R1", "no personalized-scores.json exists - personalization is disabled for MG-3",
