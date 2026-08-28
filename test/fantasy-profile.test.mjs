@@ -424,8 +424,14 @@ check("N3", "the profile validates, including its evidence block",
     const rows = ["movie", "series"].map(t => path.join(root, "site", "catalog", t, `past-24h-${t}.json`))
       .filter(f => fs.existsSync(f))
       .flatMap(f => JSON.parse(fs.readFileSync(f, "utf8")).metas);
-    check("Q3", "the built Past 24h row contains no bootstrap item", rows.length === 0,
-      `${rows.length} items leaked into a daily-discovery feed`);
+    // The row must contain no BOOTSTRAP title. It is NOT required to be empty:
+    // once a real daily run lands, its discoveries belong here, and asserting
+    // emptiness would fail on exactly the behaviour this addon exists to
+    // produce. Bootstrap identities are the thing that must never appear.
+    const bootstrapIds = new Set(bootstrapItems.map(i => i.imdb_id));
+    const leaked = rows.filter(m => bootstrapIds.has(String(m.id).split(":")[0]));
+    check("Q3", "the built Past 24h row contains no bootstrap item", leaked.length === 0,
+      `${leaked.map(m => m.name).join(", ")} leaked into a daily-discovery feed`);
   }
 }
 
