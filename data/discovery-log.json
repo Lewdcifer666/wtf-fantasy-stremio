@@ -1,4 +1,19 @@
 {
   "schema_version": 1,
-  "runs": []
+  "runs": [
+    {
+      "run_id": "2026-08-28-f1",
+      "timestamp": "2026-08-28T20:06:17Z",
+      "searched": 6,
+      "accepted": 3,
+      "rejected": 3,
+      "duplicates": 0,
+      "accepted_items": [
+        "tt10009170",
+        "tt14833612",
+        "tt11657662"
+      ],
+      "rejection_summary": "Researched six candidates against the static baseline profile. Three accepted: dark mythic/creature fantasy with real magic presence and no superhero framing. Solomon Kane reached 61, under the 65 minimum. Carnival Row fired romance_drama_dominant (romance 7, drama 8, action_density 3) and fell to 57. The 13th Warrior turned out to be historical rather than fantasy - its threat is human, with no magic and no nonhuman races - and did not clear the DNA Match floor. Personalization is dormant: no personalized-scores.json exists and none was created. Zero duplicates against the identity set."
+    }
+  ]
 }
