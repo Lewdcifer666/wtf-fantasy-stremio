@@ -14,6 +14,19 @@
         "tt11657662"
       ],
       "rejection_summary": "Researched six candidates against the static baseline profile. Three accepted: dark mythic/creature fantasy with real magic presence and no superhero framing. Solomon Kane reached 61, under the 65 minimum. Carnival Row fired romance_drama_dominant (romance 7, drama 8, action_density 3) and fell to 57. The 13th Warrior turned out to be historical rather than fantasy - its threat is human, with no magic and no nonhuman races - and did not clear the DNA Match floor. Personalization is dormant: no personalized-scores.json exists and none was created. Zero duplicates against the identity set."
+    },
+    {
+      "run_id": "2026-08-30-f1",
+      "timestamp": "2026-08-30T06:03:10Z",
+      "searched": 2,
+      "accepted": 2,
+      "rejected": 0,
+      "duplicates": 0,
+      "accepted_items": [
+        "tt14069590",
+        "tt3885422"
+      ],
+      "rejection_summary": "Two candidates were researched against the static baseline profile and both qualified. Dota: Dragon's Blood scored 98 from its complete Fantasy Content DNA, with strong dark-epic and high-fantasy-action archetype fit. The Spine of Night scored 79 despite its deliberately retro rotoscoped presentation because its adult dark-fantasy, magic, mythology and epic conflict remain strong. No hard exclusions or combination guardrails fired. Fresh duplicate and watched-evidence checks found neither identity already present. Personalization remains dormant because no personalized-scores.json exists."
     }
   ]
 }
