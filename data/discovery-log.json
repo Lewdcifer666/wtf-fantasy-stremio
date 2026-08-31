@@ -27,6 +27,19 @@
         "tt3885422"
       ],
       "rejection_summary": "Two candidates were researched against the static baseline profile and both qualified. Dota: Dragon's Blood scored 98 from its complete Fantasy Content DNA, with strong dark-epic and high-fantasy-action archetype fit. The Spine of Night scored 79 despite its deliberately retro rotoscoped presentation because its adult dark-fantasy, magic, mythology and epic conflict remain strong. No hard exclusions or combination guardrails fired. Fresh duplicate and watched-evidence checks found neither identity already present. Personalization remains dormant because no personalized-scores.json exists."
+    },
+    {
+      "run_id": "2026-08-31-f1",
+      "timestamp": "2026-08-31T06:05:06Z",
+      "searched": 2,
+      "accepted": 2,
+      "rejected": 0,
+      "duplicates": 0,
+      "accepted_items": [
+        "tt12605636",
+        "tt9310336"
+      ],
+      "rejection_summary": "Two candidates were researched against the static baseline profile and both qualified. Onyx Equinox scored 94 from complete Fantasy Content DNA, led by adult dark fantasy, Mesoamerican mythology, gods/monsters, underworld realms and a strong monster-and-magic archetype fit. Trese scored 85 with dark Filipino folklore, supernatural creatures and factions, mystery, violence and a strong monster-and-magic archetype fit. No hard exclusions or combination guardrails fired. Fresh duplicate and watched-evidence checks found neither identity already present. Personalization remains dormant because no personalized-scores.json exists."
     }
   ]
 }
