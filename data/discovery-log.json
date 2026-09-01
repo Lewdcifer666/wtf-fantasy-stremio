@@ -40,6 +40,20 @@
         "tt9310336"
       ],
       "rejection_summary": "Two candidates were researched against the static baseline profile and both qualified. Onyx Equinox scored 94 from complete Fantasy Content DNA, led by adult dark fantasy, Mesoamerican mythology, gods/monsters, underworld realms and a strong monster-and-magic archetype fit. Trese scored 85 with dark Filipino folklore, supernatural creatures and factions, mystery, violence and a strong monster-and-magic archetype fit. No hard exclusions or combination guardrails fired. Fresh duplicate and watched-evidence checks found neither identity already present. Personalization remains dormant because no personalized-scores.json exists."
+    },
+    {
+      "run_id": "2026-09-01-f1",
+      "timestamp": "2026-09-01T06:03:10Z",
+      "searched": 3,
+      "accepted": 3,
+      "rejected": 0,
+      "duplicates": 0,
+      "accepted_items": [
+        "tt21031054",
+        "tt11247158",
+        "tt10011298"
+      ],
+      "rejection_summary": "Three series candidates were researched against the static baseline profile and all qualified. The Legend of Vox Machina scored 94 with dense high-fantasy worldbuilding, varied magic, creatures, dragons and frequent violent action; Dragon Age: Absolution scored 87 from its Tevinter setting, magic, factions and action-heavy short runtime; Dragon's Dogma scored 77 from its adult dark-fantasy monster hunt, dragon threat and recurring brutal combat. No hard exclusions or combination guardrails fired. Fresh duplicate and watched-evidence checks found none of the three identities already present. Personalization remains dormant because no personalized-scores.json exists and none was created."
     }
   ]
 }
