@@ -2,7 +2,7 @@
   "schema_version": 2,
   "manifest": {
     "id": "com.github.wtffantasy.discovery",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "WTF Fantasy Discovery",
     "description": "Automated dark, mature, visually rich fantasy: deep worldbuilding, varied magic systems, creatures and non-human races, kingdoms and factions, mythic strangeness and fantasy action."
   },
