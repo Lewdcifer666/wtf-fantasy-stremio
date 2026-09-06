@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-09-06-f1",
+  "timestamp": "2026-09-06T06:00:43Z",
+  "items": [
+    {
+      "imdb_id": "tt1735898",
+      "type": "movie",
+      "title": "Snow White and the Huntsman",
+      "year": 2012,
+      "status": "watch",
+      "match_score": 74,
+      "reason": "A dark fairy-tale war with a life-draining witch-queen, dwarfs, forest creatures and rebellion-scale battles, combining strong visual fantasy craft with recurring violent action and mythic imagery.",
+      "tags": [],
+      "added_at": "2026-09-06T06:00:43Z",
+      "added_by": "daily-automation",
+      "discovery_run_id": "2026-09-06-f1",
+      "source": "https://www.imdb.com/title/tt1735898/ ; https://www.deseret.com/2012/6/1/20416016/fast-paced-snow-white-and-the-huntsman-pretty-but-dark/ ; https://flickdirect.com/blu-ray-review/827/snow-white-and-the-huntsman/blu-ray.ashx",
+      "dna": {
+        "magic_presence": 7,
+        "magic_system_depth": 3,
+        "fantasy_creatures": 7,
+        "nonhuman_races": 6,
+        "dark_fantasy": 7,
+        "mythology": 8,
+        "epic_scale": 7,
+        "kingdom_politics": 6,
+        "faction_conflict": 6,
+        "other_realms": 0,
+        "adventure": 7,
+        "family_tone": 3,
+        "worldbuilding": 7,
+        "ability_variety": 5,
+        "mystery": 3,
+        "suspense": 6,
+        "action_density": 6,
+        "action_intensity": 7,
+        "creature_threat": 5,
+        "horror": 3,
+        "visual_quality": 8,
+        "retro_visual_style": 2,
+        "visual_spectacle": 9,
+        "comedy": 2,
+        "romance_focus": 2,
+        "drama_focus": 5,
+        "superhero": 0,
+        "pace_speed": 5
+      },
+      "dna_confidence": 0.84,
+      "dna_tags": [
+        "royal_court",
+        "witchcraft",
+        "beast",
+        "folk_myth"
+      ]
+    }
+  ]
+}
