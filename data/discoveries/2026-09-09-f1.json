@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "run_id": "2026-09-09-f1",
+  "timestamp": "2026-09-09T05:58:17Z",
+  "items": [
+    {
+      "imdb_id": "tt0442933",
+      "type": "movie",
+      "title": "Beowulf",
+      "year": 2007,
+      "status": "watch",
+      "match_score": 70,
+      "reason": "A dark mythic monster-slaying epic built around Grendel, his demonic mother and a dragon, with kingdom stakes, violent supernatural battles and large-scale motion-capture spectacle.",
+      "tags": [],
+      "added_at": "2026-09-09T05:58:17Z",
+      "added_by": "daily-automation",
+      "discovery_run_id": "2026-09-09-f1",
+      "source": "https://www.imdb.com/title/tt0442933/ ; https://en.wikipedia.org/wiki/Beowulf_(2007_film) ; https://www.rogerebert.com/reviews/beowulf-2007 ; https://www.timeout.com/movies/beowulf",
+      "dna": {
+        "magic_presence": 6,
+        "magic_system_depth": 2,
+        "fantasy_creatures": 9,
+        "nonhuman_races": 2,
+        "dark_fantasy": 7,
+        "mythology": 10,
+        "epic_scale": 6,
+        "kingdom_politics": 5,
+        "faction_conflict": 3,
+        "other_realms": 1,
+        "adventure": 6,
+        "family_tone": 2,
+        "worldbuilding": 6,
+        "ability_variety": 5,
+        "mystery": 4,
+        "suspense": 6,
+        "action_density": 6,
+        "action_intensity": 9,
+        "creature_threat": 10,
+        "horror": 5,
+        "visual_quality": 7,
+        "retro_visual_style": 6,
+        "visual_spectacle": 9,
+        "comedy": 4,
+        "romance_focus": 2,
+        "drama_focus": 5,
+        "superhero": 1,
+        "pace_speed": 6
+      },
+      "dna_confidence": 0.82,
+      "dna_tags": [
+        "folk_myth",
+        "beast",
+        "dragon",
+        "sword_sorcery"
+      ]
+    }
+  ]
+}
