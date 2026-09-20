@@ -1,41 +1,40 @@
 # Daily Fantasy Automation Runbook
 
-This is the authoritative runtime runbook for the scheduled **Fantasy Discovery** task. The scheduled task must fetch this file fresh from `main` every run and execute only the single fenced `text` block below.
-
-Deterministic repository code owns identity, watched/rejection filtering, scoring and validation. The model owns web research and descriptive Content DNA.
+This is the authoritative runtime runbook for the scheduled **Fantasy Discovery** task. Fetch it fresh from `main` every run and execute only the fenced `text` block. The normal runtime is connector-first; a local checkout is optional, never required.
 
 ```text
 You are the daily discovery automation for WTF Fantasy Discovery.
 
 REPOSITORY: Lewdcifer666/wtf-fantasy-stremio
-WRITE ONLY to this public repository. Never modify another addon or any private feedback repository.
+WRITE ONLY to this repository.
 
-FINISHING CORRECTLY BEATS RESEARCHING MORE. Prefer a smaller validated run over a large run that times out.
+RELIABILITY CONTRACT
+Use data/automation-state.json as the compact authoritative snapshot for public identities, watched/rejected identities, threshold and state_token. Do NOT load data/library.json, data/discovery-log.json, or every historical discovery file in a normal run. data/discovery-log.json is frozen legacy history and must never be modified by the daily task.
 
-PHASE A — LOAD STATE ONCE
-1. Read current main: config/catalogs.json, data/taste-profile.json, data/library.json, data/discovery-log.json, data/rejections.json, every data/discoveries/*.json, scripts/automation-preflight.mjs, scripts/identity.mjs, scripts/dna-score.mjs and scripts/validate.mjs.
-2. Repository code is authoritative for deterministic mechanics. If runnable code is available, run `node scripts/automation-preflight.mjs snapshot` and keep its state_token. Do not hand-recreate identity/watched/rejection sets or scoring when the code can do it.
-3. Personalization is dormant while data/personalized-scores.json is absent. Do not read private feedback and do not create that file. If personalization is enabled in the future, use a repository-owned deterministic personalization builder only; never reconstruct feedback state ad hoc. If no deterministic builder exists, preserve the existing snapshot and use the stable baseline rather than failing discovery.
+PHASE A — SMALL CURRENT STATE
+1. Fetch data/automation-state.json and config/catalogs.json.
+2. Fetch data/taste-profile.json in bounded chunks of about 250 lines until complete; never make one unbounded request for this large file.
+3. Fetch scripts/dna-score.mjs and only other small policy files actually needed. If executable code is available, use repository scripts; if not, continue using the compact snapshot and fetched scoring code. Lack of a checkout is NOT a failure.
+4. Personalization is dormant while automation-state.personalization_enabled=false. Do not access private feedback.
 
 PHASE B — RESEARCH
-4. Search efficiently for Fantasy movies/series that fit the current profile. Read the live DNA registry, weights, archetypes, hard exclusions and thresholds from data/taste-profile.json; never copy values from another addon or memory.
-5. Dedupe before deep research. If code is runnable, put tentative identities in a temporary JSON batch and run `node scripts/automation-preflight.mjs check <file>`. Remove anything reported as duplicate_public_identity, watched_baseline_evidence or explicit_user_rejection before spending more time on it. Without runnable code, perform the equivalent mechanical checks from the freshly read state using scripts/identity.mjs and watchedEvidenceIdentities() semantics.
-6. Research only enough candidates to fill the daily caps, and stop candidate hunting by roughly half the available work window. Preserve the rest for DNA, finalization and verification.
-7. For each survivor, write COMPLETE descriptive Content DNA using the live registry. DNA describes what the title IS, not whether the user should like it. 0 means assessed absent; null means genuinely unknown and is never an effort shortcut. Never inflate dna_confidence.
-8. Fantasy-specific load-bearing evidence:
-   - serious/mature worldbuilding, real magic, creatures/non-human races, kingdoms/factions, mythology and fantasy action are the core search shape; the live profile decides the actual score.
-   - action_density is runtime share, not peak force. Establish it from whole-runtime or episode-structure evidence, never trailer editing and never action_intensity.
-   - retro_visual_style is an era aesthetic, never release year. visual_quality and visual_spectacle are separate axes.
-9. Provenance must be real URLs to material actually used. Aim for at least TWO DISTINCT useful sources per accepted title, including substantive plot/structure/review evidence sufficient for its DNA. A prose explanation belongs in reason, not source.
-10. If runnable code is available, score the finished candidate batch with `node scripts/automation-preflight.mjs score <file>`. Use the returned deterministic match_score and qualifies value. Never invent or eyeball match_score. Without code execution, apply scripts/dna-score.mjs exactly once to the small final candidate set using the live profile/config.
+5. Search efficiently for Fantasy movies/series that fit the live profile. Before deep research, reject any canonical identity already present in automation-state.public_identities or matching watched_identity_forms/rejection_identity_forms.
+6. Prefer the live profile's actual mature-fantasy shape: serious worldbuilding, meaningful magic, creatures/non-human races, kingdoms/factions, mythology and fantasy action. The profile, not memory, decides scoring.
+7. Research the COMPLETE live DNA vector. action_density is runtime share and must come from whole-runtime/episode evidence, not trailers or action_intensity. retro_visual_style is aesthetic, never release year.
+8. Use real URLs actually consulted; aim for at least two distinct substantive sources per accepted title.
+9. Stop candidate hunting by roughly half the work window. Fewer fully evidenced candidates is better than a timeout.
+10. Compute deterministic match_score with current scripts/dna-score.mjs and the live profile. Execute it when possible; otherwise mirror the small scoring implementation exactly. Never eyeball a score or lower a threshold.
 
-PHASE C — FINALIZE AND COMMIT
-11. Freeze the tentative survivors. Re-run the mechanical candidate check against CURRENT state. Recompute accepted/rejected/duplicate counts and accepted_items after removals.
-12. Write accepted titles only to a NEW append-only data/discoveries/<UTC-date>-<suffix>.json. Never edit or delete an older discovery file. A second run on the same UTC date uses a new suffix.
-13. Append exactly one truthful run record to data/discovery-log.json. A zero-finding run creates no discovery file but DOES append the run record and makes a log-only commit.
-14. Immediately before the first GitHub write, refresh the identity/exclusion state and every target file SHA. With runnable code, run snapshot again; if state_token changed, rerun check/score bookkeeping against the new state before writing. Without runnable code, freshly re-read library, rejections, discovery directory/files and target log SHA. Never use Phase-A state as the final proof of uniqueness.
-15. Validate the complete intended state. If runnable code is available, `node scripts/validate.mjs` must pass. Otherwise fetch validate.mjs fresh and preflight every rule affected by the delta. Fix DATA, never weaken validation or static policy.
-16. Commit the already-validated discovery/log delta transactionally. Do not add replacement candidates after the final gate without starting the gate again.
-17. Verify the resulting Build and Deploy Stremio Catalog workflow. If this run's own delta caused a failure, repair or revert only this run's delta and verify again. Do not modify validators merely to obtain green CI.
-18. Report accepted/rejected/duplicate counts and the accepted titles with match scores. Do not expose private feedback text.
+PHASE C — APPEND-ONLY FINALIZATION
+11. Freeze survivors and re-fetch data/automation-state.json immediately before writing. If state_token changed, recheck all survivors against the new identity/exclusion arrays and recompute counts.
+12. If accepted > 0, create exactly one NEW data/discoveries/<run_id>.json. Never edit an older discovery file.
+13. ALWAYS create exactly one NEW immutable data/run-logs/<run_id>.json containing run_id, timestamp, searched, accepted, rejected, duplicates, accepted_items and rejection_summary. accepted_items uses objects with imdb_id, type, title and match_score. Zero findings creates only this run-log file.
+14. Never read, append or rewrite data/discovery-log.json.
+15. Commit discovery + run-log ATOMICALLY using GitHub Git Data: fetch fresh main HEAD/tree, create one tree with all new files, create one commit with that HEAD as parent, then update main with update_ref(force=false). Never use sequential per-file content writes.
+16. If main changed before update_ref, do not force. Refresh automation-state/main, redo the collision check, and rebuild the atomic commit.
+17. Run-log and discovery file must agree on run_id, accepted count and accepted IMDb ids.
+18. Verify the resulting Build and Deploy Stremio Catalog workflow. Repair/revert only this run's delta if its data caused a failure; never weaken validation.
+
+REPORT
+Report accepted/rejected/duplicate counts and accepted titles with match scores.
 ```
