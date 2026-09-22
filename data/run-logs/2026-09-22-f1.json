@@ -1,0 +1,16 @@
+{
+  "run_id": "2026-09-22-f1",
+  "timestamp": "2026-09-22T06:05:31Z",
+  "searched": 5,
+  "accepted": 0,
+  "rejected": 5,
+  "duplicates": 0,
+  "accepted_items": [],
+  "rejection_summary": [
+    "Witchville (2010): rejected during research; low-budget presentation evidence and insufficient support for a complete DNA vector strong enough to justify deterministic acceptance.",
+    "Tales of an Ancient Empire (2010): rejected during research; sword-and-sorcery premise but insufficient evidence of the live profile's required worldbuilding, magic-system depth and presentation quality.",
+    "Fading of the Cries (2008): rejected during research; strong undead/necromancy elements but narrow worldbuilding and insufficient evidence for a complete qualifying DNA vector.",
+    "Dark World (2010): rejected during research; substantive review evidence explicitly describes cheap CGI/dilettantish presentation, strongly conflicting with the profile's visual-quality preference.",
+    "Journey to Promethea (2010): rejected during research; epic-fantasy premise but insufficient substantive evidence for a complete qualifying DNA vector without inventing unknown dimensions."
+  ]
+}
