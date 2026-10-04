@@ -42,3 +42,16 @@ npm test              # full suite, production-state census last
 npm run validate      # fail-closed validation of data/ against the profile
 npm run build         # build site/ (manifest + catalog JSON)
 ```
+
+## Reliability remake preparation
+
+The research-packet publication architecture is prepared but dormant until a
+coordinated cutover after the Thriller pilot gate. See
+[publication cutover](docs/publication-cutover.md). The scheduled ChatGPT task
+will stage only research packets; trusted-main GitHub workflows will validate,
+score, reconcile immutable attempts and publish through protected App-owned
+PRs. Pages keeps its existing hourly schedule and emits a deployment receipt.
+
+Existing history, genre policy, catalog identities and dormant personalization
+are preserved. Automatic private feedback interpretation and deterministic
+learning remain mandatory later work; publication is not migration completion.
