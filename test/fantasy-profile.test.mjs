@@ -541,7 +541,8 @@ check("N3", "the profile validates, including its evidence block",
     offenders.length === 0, offenders.join("\n         "));
 
   const pkg = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
-  check("U2", "zero runtime and dev dependencies", !pkg.dependencies && !pkg.devDependencies);
+  check("U2", "only pinned packet-schema Ajv dependency and no dev dependencies",
+    JSON.stringify(pkg.dependencies) === JSON.stringify({ ajv: "8.20.0" }) && !pkg.devDependencies);
   // Count-free on purpose: the vendored set grows, and a hardcoded number
   // turns every legitimate template addition into a false failure here.
   const manifest = JSON.parse(fs.readFileSync(path.join(root, "test", "engine-checksums.json"), "utf8")).files;
