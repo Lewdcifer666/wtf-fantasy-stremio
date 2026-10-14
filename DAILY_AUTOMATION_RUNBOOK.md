@@ -1,6 +1,6 @@
 # Daily Fantasy Research
 
-The single runtime instruction block below applies after the publication cutover.
+The single runtime instruction block below applies to the deployed publication pipeline.
 The saved ChatGPT task must explicitly authorize research-branch writes. This
 document cannot expand a scheduled task's authorization. Keep the 08:30
 Europe/Berlin schedule and existing task rotator unchanged.
