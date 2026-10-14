@@ -43,14 +43,14 @@ npm run validate      # fail-closed validation of data/ against the profile
 npm run build         # build site/ (manifest + catalog JSON)
 ```
 
-## Reliability remake preparation
+## Deployed reliability publication
 
-The research-packet publication architecture is prepared but dormant until a
-coordinated cutover after the Thriller pilot gate. See
-[publication cutover](docs/publication-cutover.md). The scheduled ChatGPT task
-will stage only research packets; trusted-main GitHub workflows will validate,
-score, reconcile immutable attempts and publish through protected App-owned
-PRs. Pages keeps its existing hourly schedule and emits a deployment receipt.
+The research-packet publication architecture is deployed and enabled. See
+[publication state and the original cutover checklist](docs/publication-cutover.md).
+The existing ChatGPT task stages only research packets when enabled; trusted-main
+GitHub workflows validate, score, reconcile immutable attempts and publish through
+protected App-owned PRs. A paused research task remains paused. Pages keeps its
+existing hourly schedule and emits a deployment receipt.
 
 Existing history, genre policy, catalog identities and dormant personalization
 are preserved. Automatic private feedback interpretation and deterministic
