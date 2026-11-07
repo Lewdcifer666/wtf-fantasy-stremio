@@ -1,0 +1,40 @@
+{
+  "run_id": "2026-11-07-f1",
+  "timestamp": "2026-11-07T07:38:27.979Z",
+  "searched": 3,
+  "accepted": 0,
+  "rejected": 3,
+  "duplicates": 0,
+  "accepted_items": [],
+  "rejection_summary": [
+    {
+      "title": "Sleepy Hollow",
+      "type": "movie",
+      "year": 1999,
+      "reason": "Reviewed as an atmospheric supernatural murder mystery centered on one village and a Headless Horseman. Although the mature tone, witchcraft, and visual craft are strong, independent reviews establish limited invented-world breadth, no developed nonhuman societies or kingdoms, and little sustained fantasy action; not a sufficiently strong match for this high-fantasy profile.",
+      "category": "rejected"
+    },
+    {
+      "title": "Creature Commandos",
+      "type": "series",
+      "year": 2024,
+      "reason": "Adult animated monster-team superhero/black-ops action, not a magic-led fantasy world of kingdoms, mythology and developed nonhuman cultures. Reviews also emphasize comic violence and humor rather than the required mature high-fantasy worldbuilding.",
+      "category": "rejected"
+    },
+    {
+      "title": "Pokémon: Lucario and the Mystery of Mew",
+      "type": "movie",
+      "year": 2005,
+      "reason": "Creature-centered animated family adventure; family-oriented presentation and franchise setting do not support the required mature, serious fantasy tone.",
+      "category": "rejected"
+    }
+  ],
+  "publication": {
+    "schema_version": 1,
+    "daily_key": "fantasy:2026-11-07",
+    "packet_hash": "c1939b7df2356a7461b4ff9bd65a3cbf554949d8bca6d4e26358816aeb0d761e",
+    "research_commit": "8dcee1d6a720b9dc347e337c389b80b5ae48cd08",
+    "evaluated_base": "273420cd7ddb763a6df63b8395e75b4272a27262",
+    "policy_fingerprint": "e0d9f347cfcd02bc1b85cd3b08912e0acbe6d2ef2aac470df3c539ccc3bdd395"
+  }
+}
