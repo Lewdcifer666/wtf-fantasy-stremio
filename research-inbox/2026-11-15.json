@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "genre": "fantasy",
+  "research_date": "2026-11-15",
+  "candidates": [],
+  "research_rejections": [
+    {
+      "title": "Martin Mystery",
+      "type": "series",
+      "year": 2003,
+      "reason": "Although supernatural creatures and episodic mysteries recur, independent series descriptions and reviews identify a teen-focused comedic cartoon with lightweight stakes rather than sustained mature high-fantasy worldbuilding, faction conflict or serious mythic stakes. Sources: https://www.commonsensemedia.org/tv-reviews/martin-mystery and https://www.allocine.fr/series/ficheserie_gen_cserie%3D5321.html"
+    },
+    {
+      "title": "Scooby-Doo on Zombie Island",
+      "type": "movie",
+      "year": 1998,
+      "reason": "Real supernatural threats and a darker-than-usual mystery are present, but the film remains explicitly classified as children's/family mystery-comedy rather than a serious mature fantasy with developed magic systems, kingdoms or factions. Sources: https://www.rottentomatoes.com/m/scoobydoo-on-zombie-island and https://en.wikipedia.org/wiki/Scooby-Doo_on_Zombie_Island"
+    },
+    {
+      "title": "The Cat Creature",
+      "type": "movie",
+      "year": 1973,
+      "reason": "A supernatural feline curse drives this short made-for-TV horror mystery, but available descriptions do not support the breadth of fantasy worldbuilding, magic systems, multiple races or epic conflict required for a strong baseline fit. The production's deliberate 1940s-style horror aesthetic is noted separately from release year. Sources: https://en.wikipedia.org/wiki/The_Cat_Creature"
+    }
+  ]
+}
