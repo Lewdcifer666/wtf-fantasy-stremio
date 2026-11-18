@@ -1,0 +1,33 @@
+{
+  "run_id": "2026-11-18-f1",
+  "timestamp": "2026-11-18T07:38:07.348Z",
+  "searched": 2,
+  "accepted": 0,
+  "rejected": 2,
+  "duplicates": 0,
+  "accepted_items": [],
+  "rejection_summary": [
+    {
+      "title": "Dead-End Job",
+      "type": "series",
+      "year": 2026,
+      "reason": "Netflix identifies this as a contemporary workplace-horror limited series. Across its episodes, the central structure is a sequence of dangerous paid shifts and supernatural encounters rather than a sustained invented fantasy world, kingdom/faction politics, or a developed magic system. The Korea Times' creator interview and Cineplay's whole-season assessment corroborate its horror-anthology structure and satirical labor focus. Not a sufficiently strong fit for the mature high-fantasy worldbuilding baseline.",
+      "category": "rejected"
+    },
+    {
+      "title": "Remarkably Bright Creatures",
+      "type": "movie",
+      "year": 2026,
+      "reason": "Netflix's synopsis and the Associated Press review describe a present-day aquarium-set emotional drama about grief, family and friendship with an unusually perceptive octopus. It has no substantive invented fantasy setting, magic system, mythic factions or fantasy adventure; creature-related wording is a misleading search match.",
+      "category": "rejected"
+    }
+  ],
+  "publication": {
+    "schema_version": 1,
+    "daily_key": "fantasy:2026-11-18",
+    "packet_hash": "7bcf165707e89e5f568e1adfa7fffcf58a149d65beaf44e1770b64ed0048efe4",
+    "research_commit": "f7ae6b2cd22490bf2e4939c32294955840a54a63",
+    "evaluated_base": "2b385554d6b2cf4253e1f18bcc90b0f23aef9c57",
+    "policy_fingerprint": "e0d9f347cfcd02bc1b85cd3b08912e0acbe6d2ef2aac470df3c539ccc3bdd395"
+  }
+}
