@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "genre": "fantasy",
+  "research_date": "2026-11-21",
+  "candidates": [],
+  "research_rejections": [
+    {
+      "title": "Creature Commandos",
+      "type": "series",
+      "year": 2024,
+      "reason": "DC's official series description and its production coverage identify an adult animated DC Universe black-ops monster team. Despite creatures and dark material, its superhero/comics-team structure and modern mission setting do not meet the mature invented-world fantasy profile. Public corroboration: https://www.dc.com/tv/creature-commandos-2024 and https://www.dc.com/blog/2024/12/05/david-harbour-comes-alive-as-creature-commandos-undead-frankenstein."
+    },
+    {
+      "title": "Pokémon: Lucario and the Mystery of Mew",
+      "type": "movie",
+      "year": 2005,
+      "reason": "Although it features mythic creatures, a guardian legend and a kingdom, Apple TV and Prime Video describe a Pokémon adventure centered on Ash, Pikachu, friendship and a child-accessible presentation. Its family-oriented tone does not fit the required mature fantasy register. Public corroboration: https://tv.apple.com/de/movie/pokemon-lucario-und-das-geheimnis-von-mew/umc.cmc.5tkbtg57koxuib23ixh2akop and https://www.primevideo.com/-/de/detail/0NGF09GR989A18MJUKFBHP5CXK."
+    },
+    {
+      "title": "The Hound of the Baskervilles",
+      "type": "movie",
+      "year": 2002,
+      "reason": "The BBC adaptation centers on Sherlock Holmes investigating an apparently supernatural hound on Dartmoor, rather than a real magic system or invented high-fantasy civilization. The underlying story resolves its supposed supernatural curse through human deception. Public corroboration: https://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles_%282002_film%29 and https://www.litcharts.com/lit/the-hound-of-the-baskervilles/themes/natural-vs-supernatural."
+    }
+  ]
+}
