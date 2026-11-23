@@ -1,0 +1,34 @@
+{
+  "run_id": "2026-11-23-f1",
+  "timestamp": "2026-11-23T07:44:55.399Z",
+  "searched": 2,
+  "accepted": 0,
+  "rejected": 2,
+  "duplicates": 0,
+  "accepted_items": [],
+  "rejection_summary": [
+    {
+      "title": "Scooby-Doo",
+      "year": 2002,
+      "type": "movie",
+      "imdb_id": "tt0267913",
+      "reason": "The Spooky Island demon investigation is presented as a PG family comedy/mystery rather than serious mature fantasy with sustained invented-world history, magic systems, or kingdoms. Sources consulted: https://www.rottentomatoes.com/m/1112357-scoobydoo and https://www.imdb.com/title/tt0267913/plotsummary/.",
+      "category": "rejected"
+    },
+    {
+      "title": "Lifepod",
+      "year": 1993,
+      "type": "movie",
+      "reason": "A spacecraft escape-pod survival and sabotage mystery, explicitly science fiction rather than magic- or mythology-based fantasy. Sources consulted: https://www.filmdienst.de/film/details/64374/lifepod and https://en.wikipedia.org/wiki/Lifepod_(1993_film).",
+      "category": "rejected"
+    }
+  ],
+  "publication": {
+    "schema_version": 1,
+    "daily_key": "fantasy:2026-11-23",
+    "packet_hash": "e693e025e45bf92f389558881129933f9872d34265df2877b571711506ffaa27",
+    "research_commit": "89ac800d7ceab9c60e73e6968f5fe086b668dedb",
+    "evaluated_base": "349fd7156760313b537a39312706f0a7516914f1",
+    "policy_fingerprint": "e0d9f347cfcd02bc1b85cd3b08912e0acbe6d2ef2aac470df3c539ccc3bdd395"
+  }
+}
